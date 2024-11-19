@@ -47,15 +47,20 @@ Full word comparison: Only performed at candidate positions
 ## Space-Time Tradeoff Analysis
 ### Time Complexity
 Initialisation: O(n²) where n is grid dimension (10,000)
+
 Search: O(k) where k is occurrences of word's prefix
 
 Best case: O(1) if prefix not found
+
 Average case: Very fast due to prefix filtering
+
 Worst case: O(n) if prefix extremely common
 
 ### Space Complexity
 Grid storage: O(n²)
+
 Prefix indexes: O(n²)
+
 Total: O(n²)
 
 ## Alternative Approaches Considered
