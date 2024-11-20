@@ -1,11 +1,11 @@
 class WordSearch:
-    def __init__(self, grid):
+    def __init__(self, grid, ROW_LENGTH=10000):
         """
         Initialise the word search solver with a grid.
         Args:
             grid (str): String containing the grid row by row with no separators
         """
-        self.ROW_LENGTH = 100000
+        self.ROW_LENGTH = ROW_LENGTH
         self.grid = grid
         
         # Create horizontal line index for faster searching
@@ -43,6 +43,10 @@ class WordSearch:
         Returns:
             bool: True if word is found, False otherwise
         """
+
+        if not word: 
+            return False 
+        
         if len(word) < 3:
             return self._brute_force_search(word)
         
